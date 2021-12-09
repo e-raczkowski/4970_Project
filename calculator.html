@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>GPA Calculator</title>
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/calculator.css">
+
+	<script>
+		function getGPA() {
+			var credit1 = parseInt(document.getElementById("credit1").value);
+			var credit2 = parseInt(document.getElementById("credit2").value);
+
+			var grade1 = parseInt(document.getElementById("grade1").value);
+			var grade2 = parseInt(document.getElementById("grade2").value);
+
+			var letter1 = 0;
+			var letter2 = 0;
+
+			if (grade1 == "A") {
+				letter1 = 4.0;
+			}
+			else if (grade1 == "B") {
+				letter1 = 3.0;
+			}
+			else if (grade1 == "C") {
+				letter1 = 2.0;
+			}
+			else if (grade1 == "D") {
+				letter1 = 1.0;
+			}
+			else if (grade1 == "F") {
+				letter1 = 0;
+			}
+
+			if (grade2 == "A" || "a") {
+				letter2 = 4.0;
+			}
+			else if (grade2 == "B") {
+				letter2 = 3.0;
+			}
+			else if (grade2 == "C") {
+				letter2 = 2.0;
+			}
+			else if (grade2 == "D") {
+				letter2 = 1.0;
+			}
+			else if (grade2 == "F") {
+				letter2 = 0;
+			}
+
+			var total = (credit1 * letter1) + (credit2 * letter2);
+			var average = total / (credit1 + credit2);
+			document.getElementById("GPA").innerHTML = average.toFixed(2);
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<img src="images/AUM_header.png" alt="AUM logo">
+	</header>
+	<ul class="navmenu">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="description.html">Description</a></li>
+		<li><a href="apply.html">Apply</a></li>
+		<li><a href="calculator.html">GPA Caclulator</a></li>
+	</ul>
+	<h2>Calculate GPA Here!</h2>
+	<table>
+		<tr>
+			<th>Course 1:</th>
+			<td><input type="text" id="grade1" placeholder="Letter Grade"></td>
+			<td><input type="text" id="credit1" placeholder="Credit Hours"></td>
+		</tr>
+		<tr>
+			<th>Course 2:</th>
+			<td><input type="text" id="grade2" placeholder="Letter Grade"></td>
+			<td><input type="text" id="credit2" placeholder="Credit Hours"></td>
+		</tr>
+		<tr>
+			<td>
+				<button onclick="getGPA()">Caculate GPA</button>
+			</td>
+		</tr>
+	</table>
+	<br><p id="GPA" style="font-size:300%; color:#f04e29; text-align: center;"></p>
+	<footer>2021 All Rights Reserved. Auburn University at Montgomery. Created by Elizabeth Raczkowski.</footer>
+</body>
+</html>

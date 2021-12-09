@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Apply Here</title>
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/apply.css">
+</head>
+<body>
+	<header>
+		<img src="images/AUM_header.png" alt="AUM logo">
+	</header>
+	<ul class="navmenu">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="description.html">Description</a></li>
+		<li><a href="apply.html">Apply</a></li>
+		<li><a href="calculator.html">GPA Caclulator</a></li>
+	</ul>
+	<h2>Apply Here!</h2>
+	<p>If you wish to apply to be a teaching assistant, please fill out this form.</p>
+	<div class="formstyle">
+	<form name="TAapplication" action="ta_apply.html" method="GET">
+	<label for="firstname">First Name:</label>
+	<input type="text" name="First Name" id="firstname"><br>
+	<label for="lastname">Last Name:</label>
+	<input type="text" name="Last Name" id="lastname"><br>
+	<label for="identity">Student ID:</label>
+	<input type="number" name="identity" id="identity" placeholder="Number after S0" minlength="7" maxlength="7"><br>
+	<p>Gender:</p>
+	<div>
+		<input type="radio" id="male" name="gender" value="male">
+		<label for="male">Male</label>
+	</div>
+	<div>
+		<input type="radio" id="female" name="gender" value="female">
+		<label for="female">Female</label>
+	</div>
+	<div>
+		<input type="radio" id="other" name="gender" value="other">
+		<label for="other">Other</label>
+	</div>
+	</div>
+	<label for="gpa">GPA:</label>
+	<input type="number" step="any" name="gpa" id="gpa" minlength="3" maxlength="3"><br><br>
+	<label for="submission">Date:</label>
+	<input type="date" id="submission" name="submission"><br><br>
+	<div>
+		<textarea name="comments" id="comments">Comments here!</textarea>
+	</div>
+	<input type="submit" name="submit" id="button">
+	<input type="reset" name="reset" id="reset">
+	</form>
+	</div>
+	<footer>2021 All Rights Reserved. Auburn University at Montgomery. Created by Elizabeth Raczkowski.</footer>
+</body>
+</html>
